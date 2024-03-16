@@ -8,8 +8,8 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
       <p className={css.name}>{name}</p>
       <p
         className={clsx("status", {
-          "onlineText": isOnline,
-          "offlineText": !isOnline,
+          [css["onlineText"]]: isOnline,
+          [css["offlineText"]]: !isOnline,
         })}
       >
         {isOnline ? "online" : "offline"}
